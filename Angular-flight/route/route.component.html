@@ -1,0 +1,23 @@
+<form class="form-inline" (ngSubmit)="search()">
+    <label for="source">Source</label>
+    <select name="source" class="form-control" [(ngModel)]="source" required>
+        <option *ngFor="let src of cities" [value]="src">{{ src }}</option>
+    </select>
+    <label for="destiny">Destination</label> 
+    <select name="destiny" class="form-control" [(ngModel)]="destiny" required>
+        <option *ngFor="let dest of cities" [value]="dest">{{ dest }}</option>
+    </select>
+    <button class="btn btn-primary" type="submit">Find by Route</button>
+</form>
+<br>
+<table class="table table-bordered">
+    <tr>
+        <th>Code</th><th>Carrier</th><th>Source</th><th>Destination</th>
+    </tr>
+    <tr *ngFor="let f of flights">
+        <td>{{ f.code }}</td>
+        <td>{{ f.carrier }}</td>
+        <td>{{ f.source }}</td>
+        <td>{{ f.destiny }}</td>
+    </tr>
+</table>
