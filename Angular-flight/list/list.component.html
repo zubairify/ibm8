@@ -1,0 +1,12 @@
+<table class="table table-bordered">
+    <tr>
+        <th>Code</th><th>Carrier</th><th>Source</th><th>Destination</th><th>Action</th>
+    </tr>
+    <tr *ngFor="let f of flights; let i = index">
+        <td>{{ f.code }}</td>
+        <td>{{ f.carrier }}</td>
+        <td>{{ f.source }}</td>
+        <td>{{ f.destiny }}</td>
+        <td><button class="btn btn-danger" (click)="delete(i)">Delete</button></td>
+    </tr>
+</table>

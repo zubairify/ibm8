@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <a class="navbar-brand" href="#">Flight Application</a>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['add']">Add Flight</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['list']">List Flight</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['find']">Search Flight</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['route']">Flight By Route</a>
+    </li>
+  </ul>
+</nav>
+<br>
+<div class="container">
+<router-outlet></router-outlet>
+</div>
